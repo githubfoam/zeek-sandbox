@@ -16,11 +16,10 @@
   hosts:  vg-zeek-01
   become: yes
   roles:
-    # - zeek
-    - zeek-source
+    - zeek
 - name: "Install zeek"
   gather_facts: true
   hosts:  vg-zeek-02
   become: yes
   roles:
-    - zeek
+    - zeek-source

@@ -31,3 +31,8 @@ $ cat dhcp.log | zeek-cut client_addr host_name | sort | uniq
 172.17.1.129    Nalyvaiko-PC
 
 ~~~~
+~~~~
+"zeek-source" role, platform independent building from git source
+
+<https://docs.zeek.org/en/stable/install/install.html#installing-from-source>
+~~~~

@@ -2,7 +2,7 @@
 - vagrant_box_host: "vg-zeek-01"
   vagrant_box: "bento/ubuntu-19.04"
   vbox_name: "vbox-zeek-01"
-  vbox_ram: 512
+  vbox_ram: 1024
   vbox_cpu: 2
   network_type: "private_network"
   vagrant_box_ip: 192.168.18.9
@@ -13,8 +13,7 @@
   ansible_compatibility_mode: "2.0"
 
 - vagrant_box_host: "vg-zeek-02"
-  # vagrant_box: "bento/centos-7.7"
-  vagrant_box: "bento/ubuntu-19.04"  
+  vagrant_box: "bento/centos-7.7"
   vbox_name: "vbox-zeek-02"
   vbox_ram: 512
   vbox_cpu: 2
