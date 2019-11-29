@@ -1,0 +1,21 @@
+---
+- name: "Add zeek repository"
+  template:
+      src: security.zeek.repo.j2
+      dest: /etc/yum.repos.d/security.zeek.repo
+      owner: root
+      group: root
+      mode: 0644
+- name: "Install required packages on RedHat "
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - zeek
+- name: "Check for zeek"
+  stat:
+   path: '/opt/zeek/bin/zeek'
+  register: zeekpath
+- name: "Set Path for zeek"
+  lineinfile: dest='/etc/profile' regexp='^#?\s*export PATH=/opt/zeek(.*)$' line='export PATH=/opt/zeek/bin:$PATH' state=present
+  when: zeekpath.stat.exists

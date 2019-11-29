@@ -1,0 +1,40 @@
+---
+- vagrant_box_host: "vg-zeek-01"
+  vagrant_box: "bento/ubuntu-19.04"
+  vbox_name: "vbox-zeek-01"
+  vbox_ram: 512
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.9
+  guest_port: 1234
+  host_port: 1234
+  server_bootstrap: "provisioning/deploy.yml"
+  ansible_version: "2.9.1"
+  ansible_compatibility_mode: "2.0"
+
+- vagrant_box_host: "vg-zeek-02"
+  # vagrant_box: "bento/centos-7.7"
+  vagrant_box: "bento/ubuntu-19.04"  
+  vbox_name: "vbox-zeek-02"
+  vbox_ram: 512
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.10
+  guest_port: 80
+  host_port: 81
+  server_bootstrap: "provisioning/deploy.yml"
+  ansible_version: "2.9.1"
+  ansible_compatibility_mode: "2.0"
+
+- vagrant_box_host: "vg-zeek-03"
+  vagrant_box: "bento/fedora-31"
+  vbox_name: "vbox-zeek-03"
+  vbox_ram: 512
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.11
+  guest_port: 1235
+  host_port: 1235
+  server_bootstrap: "provisioning/deploy.yml"
+  ansible_version: "2.8.6" # bento/fedora-31
+  ansible_compatibility_mode: "2.0"

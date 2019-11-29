@@ -1,0 +1,16 @@
+---
+zeek_debian_reqs:
+      # - python-pip
+      # - python-virtualenv
+      # - cmake
+      # - make
+      # - gcc
+      # - g++
+      # - flex
+      # - bison
+      # - libpcap-dev
+      # - libssl-dev
+      # - python-dev
+      # - swig
+      # - zlib1g-dev
+zeek_redhat_reqs:

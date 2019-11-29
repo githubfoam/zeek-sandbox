@@ -1,0 +1,26 @@
+---
+- name: "Boot all hosts"
+  gather_facts: true
+  hosts:  all
+  become: yes
+  vars:
+    add_host_entries: true
+    add_resolv_entries: true
+  pre_tasks:
+  - name: "Setting hostname"
+    shell: "hostnamectl set-hostname {{ inventory_hostname }}"
+  roles:
+    - common
+- name: "Install zeek"
+  gather_facts: true
+  hosts:  vg-zeek-01
+  become: yes
+  roles:
+    # - zeek
+    - zeek-source
+- name: "Install zeek"
+  gather_facts: true
+  hosts:  vg-zeek-02
+  become: yes
+  roles:
+    - zeek
