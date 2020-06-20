@@ -1,6 +1,6 @@
 ---
 - vagrant_box_host: "vg-zeek-01"
-  vagrant_box: "bento/ubuntu-19.04"
+  vagrant_box: "bento/ubuntu-19.10"
   vbox_name: "vbox-zeek-01"
   vbox_ram: 1024
   vbox_cpu: 2
