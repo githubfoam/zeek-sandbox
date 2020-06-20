@@ -4,10 +4,12 @@
   apt:
    name: aptitude
    force_apt_get: yes
-# - name: "Install required packages"
-#   package:
-#     name: "{{ zeek_debian_reqs }}"
-#     state: present
+
+# https://docs.zeek.org/en/current/install/install.html#required-dependencies
+- name: "Install required packages"
+  package:
+    name: "{{ zeek_debian_reqs }}"
+    state: present
 
 
 # - name: "Add zeek repository"
