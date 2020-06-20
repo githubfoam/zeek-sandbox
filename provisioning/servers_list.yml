@@ -10,7 +10,7 @@
   host_port: 1234
   server_bootstrap: "provisioning/deploy.yml"
   server_script: "provisioning/bootstrap.sh"
-  ansible_version: "2.9.1"
+  ansible_version: "2.9.10"
   ansible_compatibility_mode: "2.0"
 
 - vagrant_box_host: "vg-zeek-02"
