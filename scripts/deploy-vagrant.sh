@@ -59,4 +59,3 @@ vagrant box list #veridy installed boxes
 vagrant status #Check the status of the VMs to see that none of them have been created yet
 vagrant status
 virsh list --all #show all running KVM/libvirt VMs
-                                                     "

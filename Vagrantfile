@@ -33,13 +33,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
               ansible.playbook = server["server_bootstrap"]
               # ansible.inventory_path = 'provisioning/hosts'
               # ansible.verbose = "vvvv" # debug
-          end # end if box.vm.provision
+           end # end if box.vm.provision
 
-          # box.vm.provision "shell", inline: server["server_script"], privileged: false
-          # box.vm.provision "shell", inline: <<-SHELL
-          box.vm.provision "shell", inline: <<-SHELL
-          hostnamectl status
-          SHELL
+           # box.vm.provision "shell", inline: server["provisioning/bootstrap.sh"], privileged: false
+           box.vm.provision "shell", inline: <<-SHELL
+           echo "======================================================================================="
+           hostnamectl status
+           echo "======================================================================================="
+           SHELL
 
         end # end of config.vm
 
