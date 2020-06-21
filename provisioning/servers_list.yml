@@ -1,6 +1,6 @@
 ---
 - vagrant_box_host: "vg-zeek-01"
-  vagrant_box: "debian/buster64"
+  vagrant_box: "bento/debian-10.4"   
   vbox_name: "vbox-zeek-01"
   vbox_ram: 1024
   vbox_cpu: 2

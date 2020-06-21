@@ -45,8 +45,13 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant mutate "bento/fedora-31" libvirt
 # vagrant up --provider=libvirt
 
-# https://app.vagrantup.com/debian/boxes/buster64
-vagrant box add "debian/buster64" --provider=libvirt
+# # https://app.vagrantup.com/debian/boxes/buster64
+# It appears your machine doesn't support NFS, or there is not an
+# vagrant box add "debian/buster64" --provider=libvirt
+# vagrant up --provider=libvirt vg-zeek-01
+
+vagrant box add "bento/debian-10.4" --provider=virtualbox
+vagrant mutate "bento/debian-10.4"  libvirt
 vagrant up --provider=libvirt vg-zeek-01
 
 vagrant box list #veridy installed boxes
