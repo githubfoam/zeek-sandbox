@@ -10,7 +10,7 @@ matrix:
   fast_finish: true
   include:
 
-    - name: "freebsd  Python 3.7 on bionic amd64" #OK
+    - name: "docker build  Python 3.7 on bionic amd64" #OK
       dist: bionic
       arch: amd64
       language: python
@@ -23,7 +23,7 @@ matrix:
         - pip list
         - python --version
       script:
-        - travis_wait 30 sudo make deploy-vagrant
+        - sudo docker build -t debian:zeek . --file=scripts/Dockerfile.zeek.debian
       after_success:
         - deactivate
 
