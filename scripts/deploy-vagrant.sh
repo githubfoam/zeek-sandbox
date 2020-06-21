@@ -50,6 +50,7 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant box add "debian/buster64" --provider=libvirt
 # vagrant up --provider=libvirt vg-zeek-01
 
+# https://github.com/chef/bento/tree/master/packer_templates/debian
 vagrant box add "bento/debian-10.4" --provider=virtualbox
 vagrant mutate "bento/debian-10.4"  libvirt
 vagrant up --provider=libvirt vg-zeek-01
