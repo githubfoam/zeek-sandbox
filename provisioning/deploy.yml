@@ -11,15 +11,15 @@
     shell: "hostnamectl set-hostname {{ inventory_hostname }}"
   roles:
     - common
-- name: "Install zeek from source"
-  gather_facts: true
-  hosts:  vg-zeek-01
-  become: yes
-  roles:
-    - zeek-source
-- name: "Install zeek"
-  gather_facts: true
-  hosts:  vg-zeek-02
-  become: yes
-  roles:
-    - zeek-source
+# - name: "Install zeek from source"
+#   gather_facts: true
+#   hosts:  vg-zeek-01
+#   become: yes
+#   roles:
+#     - zeek-source
+# - name: "Install zeek"
+#   gather_facts: true
+#   hosts:  vg-zeek-02
+#   become: yes
+#   roles:
+#     - zeek-source
