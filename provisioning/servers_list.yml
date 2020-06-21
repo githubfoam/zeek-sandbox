@@ -9,7 +9,7 @@
   guest_port: 1234
   host_port: 1234
   server_bootstrap: "provisioning/deploy.yml"
-  server_script: "provisioning/bootstrap.sh"
+  server_script: "provisioning/bootstrapx.sh"
   # server_script: "provisioning/build_zeek.sh"
   ansible_version: "2.7.7"
   ansible_compatibility_mode: "2.0"
