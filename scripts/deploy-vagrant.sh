@@ -36,14 +36,19 @@ vagrant version
 echo "=============================Install Vagrant============================================================="
 vagrant plugin install vagrant-libvirt #The vagrant-libvirt plugin is required when using KVM on Linux
 vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with different providers
-vagrant box add "bento/ubuntu-19.10" --provider=virtualbox
-vagrant mutate "bento/ubuntu-19.10" libvirt
-vagrant up --provider=libvirt vg-zeek-01
+# vagrant box add "bento/ubuntu-19.10" --provider=virtualbox
+# vagrant mutate "bento/ubuntu-19.10" libvirt
+# vagrant up --provider=libvirt vg-zeek-01
 #https://app.vagrantup.com/centos/boxes/7 by default libvirt support
 # vagrant box add "centos/7" --provider=libvirt
 # vagrant box add "bento/fedora-31" --provider=virtualbox
 # vagrant mutate "bento/fedora-31" libvirt
 # vagrant up --provider=libvirt
+
+# https://app.vagrantup.com/debian/boxes/buster64
+vagrant box add "debian/buster64" --provider=libvirt
+vagrant up --provider=libvirt vg-zeek-01
+
 vagrant box list #veridy installed boxes
 vagrant status #Check the status of the VMs to see that none of them have been created yet
 vagrant status

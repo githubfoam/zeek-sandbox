@@ -27,6 +27,23 @@ matrix:
       after_success:
         - deactivate
 
+    - name: "libvirt build  Python 3.7 on bionic amd64" #OK
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+        - pip list
+        - python --version
+      script:
+        - sudo make deploy-vagrant
+      after_success:
+        - deactivate
+
     # # https://github.com/rootless-containers/usernetes#quick-start
     # - name: "usernetes container runtimes(cri=crio) Python 3.7 on bionic amd64" #OK
     #   dist: bionic

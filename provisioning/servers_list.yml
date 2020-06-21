@@ -1,6 +1,6 @@
 ---
 - vagrant_box_host: "vg-zeek-01"
-  vagrant_box: "bento/ubuntu-19.10"
+  vagrant_box: "debian/buster64"
   vbox_name: "vbox-zeek-01"
   vbox_ram: 1024
   vbox_cpu: 2
@@ -9,8 +9,8 @@
   guest_port: 1234
   host_port: 1234
   server_bootstrap: "provisioning/deploy.yml"
-  # server_script: "provisioning/bootstrap.sh"
-  server_script: "provisioning/build_zeek.sh"  
+  server_script: "provisioning/bootstrap.sh"
+  # server_script: "provisioning/build_zeek.sh"
   ansible_version: "2.9.10"
   ansible_compatibility_mode: "2.0"
 
