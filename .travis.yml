@@ -24,6 +24,7 @@ matrix:
         - python --version
       script:
         - sudo docker build -t debian:zeek . --file=scripts/Dockerfile.zeek.debian
+        - sudo docker image ls
       after_success:
         - deactivate
 
