@@ -18,11 +18,11 @@ apt-get -qqy install build-essential git bison flex gawk cmake swig libssl1.0-de
 
 # Build bro
 export VER="3.0.0"
-mkdir -p ${WD}/common
-stat /vagrant/provisioning/buildbro
-cp /vagrant/provisioning/buildbro ${WD}/common
-stat ${WD}/common/buildbro
-bash ${WD}/common/buildbro zeek ${VER}
+export BRO="zeek"
+export BUILD_TYPE=${3-Release}
 
-# ADD ./common/buildbro ${WD}/common/buildbro
-# RUN ${WD}/common/buildbro zeek ${VER}
+URL=https://download.zeek.org/${BRO}-${VER}.tar.gz
+
+echo VER is $VER
+echo URL is $URL
+echo BUILD_TYPE is $BUILD_TYPE
