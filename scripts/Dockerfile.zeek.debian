@@ -8,4 +8,6 @@ RUN apt-get update && apt-get upgrade -y && \
 # Build bro
 ENV VER 3.0.0
 ADD scripts/common/buildbro ${WD}/common/buildbro
-RUN ${WD}/common/buildbro zeek ${VER}
+RUN source ${WD}/common/buildbro zeek ${VER}
+
+ENV BRO zeek
