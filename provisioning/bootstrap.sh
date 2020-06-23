@@ -21,11 +21,6 @@ apt-get -qqy install build-essential git bison flex gawk cmake swig libmaxminddb
 
 # Build bro
 export VER="3.0.0"
-export BRO="zeek"
-export BUILD_TYPE=${3-Release}
 
-URL=https://download.zeek.org/${BRO}-${VER}.tar.gz
-
-echo VER is $VER
-echo URL is $URL
-echo BUILD_TYPE is $BUILD_TYPE
+#RUN ${WD}/common/buildbro zeek ${VER}
+bash common/buildbro zeek ${VER}
