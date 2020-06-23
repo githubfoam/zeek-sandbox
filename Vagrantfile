@@ -30,12 +30,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
               # ansible.compatibility_mode = "2.0"
               ansible.compatibility_mode = server["ansible_compatibility_mode"]
               ansible.version = server["ansible_version"]
-              ansible.playbook = server["server_bootstrap"]
+              # ansible.playbook = server["server_bootstrap"]
+              ansible.playbook = "provisioning/bootstrap.sh"
               # ansible.inventory_path = 'provisioning/hosts'
               # ansible.verbose = "vvvv" # debug
            end # end if box.vm.provision
 
-           box.vm.provision "shell", inline: server["server_script"], privileged: false
+           # box.vm.provision "shell", inline: server["server_script"], privileged: false
            # box.vm.provision "shell", inline: <<-SHELL
            # echo "======================================================================================="
            # hostnamectl status

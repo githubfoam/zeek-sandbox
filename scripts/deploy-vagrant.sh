@@ -54,6 +54,7 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 vagrant box add "bento/debian-10.4" --provider=virtualbox
 vagrant mutate "bento/debian-10.4"  libvirt
 vagrant up --provider=libvirt vg-zeek-01
+vagrant up ssh -c vg-zeek-01 "ls -lai /"
 
 vagrant box list #veridy installed boxes
 vagrant status #Check the status of the VMs to see that none of them have been created yet
