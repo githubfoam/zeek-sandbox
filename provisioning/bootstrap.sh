@@ -23,4 +23,4 @@ apt-get -qqy install build-essential git bison flex gawk cmake swig libmaxminddb
 export VER="3.0.0"
 
 #RUN ${WD}/common/buildbro zeek ${VER}
-bash common/buildbro zeek ${VER}
+bash provisioning/common/buildbro zeek ${VER}
