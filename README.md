@@ -1,7 +1,7 @@
 # zeek sandbox
 
-Travis (.com) test branch:
-[![Build Status](https://travis-ci.com/githubfoam/zeek-sandbox.svg?branch=test)](https://travis-ci.com/githubfoam/zeek-sandbox)  
+Travis (.com) branch:
+[![Build Status](https://travis-ci.com/githubfoam/zeek-sandbox.svg?branch=master)](https://travis-ci.com/githubfoam/zeek-sandbox)  
 
 ~~~~
 vagrant up
