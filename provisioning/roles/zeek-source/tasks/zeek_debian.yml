@@ -8,11 +8,12 @@
   package:
     name: "{{ zeek_debian_reqs }}"
     state: present
+# https://github.com/zeek/zeek/releases
 - name: "Installing zeek from source"
   git:
     repo: 'https://github.com/zeek/zeek.git'
     dest: /tmp/checkout
-    version: v3.0.0
+    version: v3.1.4
     update: no # Example just ensuring the repo checkout exists
 - name: "Configure zeek"
   shell: ./configure chdir=/tmp/checkout >> /tmp/zeek_configure.out

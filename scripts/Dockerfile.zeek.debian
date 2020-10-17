@@ -1,0 +1,14 @@
+FROM debian:stretch as builder
+ENV WD /scratch
+RUN mkdir ${WD}
+WORKDIR /scratch
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get -qqy install build-essential git bison flex gawk cmake swig libssl1.0-dev libmaxminddb-dev libpcap-dev python-dev libcurl4-openssl-dev wget libncurses5-dev ca-certificates zlib1g-dev --no-install-recommends
+
+# Build bro
+ENV VER 3.0.0
+ADD scripts/common/buildbro ${WD}/common/buildbro
+#RUN ${WD}/common/buildbro zeek ${VER}
+RUN cd ${WD}/common &&  bash buildbro zeek ${VER}
+
+ENV BRO zeek
